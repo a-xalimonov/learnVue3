@@ -1,0 +1,19 @@
+import { createRouter, createWebHistory } from 'vue-router'
+import DeclarativeRendering from '../views/DeclarativeRendering.vue'
+
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: [
+    {
+      path: '/',
+      redirect: '/declarative_rendering'
+    },
+    {
+      path: '/declarative_rendering',
+      name: 'declarative_rendering',
+      component: DeclarativeRendering
+    }
+  ]
+})
+
+export default router
