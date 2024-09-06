@@ -15,6 +15,6 @@ const headerText = ref('Текущее время')
 <style scoped>
 .content {
   text-align: center;
-  margin: 80px auto
+  margin-top: 80px;
 }
 </style>

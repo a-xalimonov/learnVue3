@@ -6,6 +6,7 @@ import { RouterLink, RouterView } from 'vue-router'
   <div class="wrapper">
     <nav>
       <RouterLink to="/declarative_rendering">Declarative Rendering</RouterLink>
+      <RouterLink to="/attribute_binding">Attribute Binding</RouterLink>
     </nav>
     <main>
       <RouterView />
