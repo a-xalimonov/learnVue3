@@ -3,6 +3,7 @@ import DeclarativeRendering from '../views/DeclarativeRendering.vue'
 import AttributeBinding from '../views/AttributeBinding.vue'
 import EventListeners from '../views/EventListeners.vue'
 import FormBinding from '../views/FormBinding.vue'
+import ConditionalRendering from '../views/ConditionalRendering.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -31,6 +32,12 @@ const router = createRouter({
       name: 'form_binding',
       component: FormBinding
     },
+    {
+      path: '/conditional_rendering',
+      name: 'conditional_rendering',
+      component: ConditionalRendering
+    },
+    
   ]
 })
 

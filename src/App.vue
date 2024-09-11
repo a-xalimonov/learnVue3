@@ -9,6 +9,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <RouterLink to="/attribute_binding">Attribute Binding</RouterLink>
       <RouterLink to="/event_listeners">Event Listeners</RouterLink>
       <RouterLink to="/form_binding">Form Binding</RouterLink>
+      <RouterLink to="/conditional_rendering">Conditional Rendering</RouterLink>
     </nav>
     <main>
       <RouterView />
