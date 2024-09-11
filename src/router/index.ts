@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import DeclarativeRendering from '../views/DeclarativeRendering.vue'
 import AttributeBinding from '../views/AttributeBinding.vue'
 import EventListeners from '../views/EventListeners.vue'
+import FormBinding from '../views/FormBinding.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -24,6 +25,11 @@ const router = createRouter({
       path: '/event_listeners',
       name: 'event_listeners',
       component: EventListeners
+    },
+    {
+      path: '/form_binding',
+      name: 'form_binding',
+      component: FormBinding
     },
   ]
 })

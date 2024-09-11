@@ -8,7 +8,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <RouterLink to="/declarative_rendering">Declarative Rendering</RouterLink>
       <RouterLink to="/attribute_binding">Attribute Binding</RouterLink>
       <RouterLink to="/event_listeners">Event Listeners</RouterLink>
-
+      <RouterLink to="/form_binding">Form Binding</RouterLink>
     </nav>
     <main>
       <RouterView />
