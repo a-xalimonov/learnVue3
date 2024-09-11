@@ -2,13 +2,21 @@
 import { ref } from 'vue';
 
 const className = ref('teal');
+
+function setTeal() {
+  className.value = 'teal'
+}
+function setBlue() {
+  className.value = 'blue'
+}
+
 </script>
 
 <template>
   <div class="content">
       <h1 :class="className">Цветной текст ({{ className }})</h1>
-      <button @click="className = 'teal'">Бирюзовый</button>
-      <button @click="className = 'blue'">Синий</button>
+      <button @click="setTeal">Бирюзовый</button>
+      <button @click="setBlue">Синий</button>
   </div>
 </template>
 
