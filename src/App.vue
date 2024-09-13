@@ -11,6 +11,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <RouterLink to="/form_binding">Form Binding</RouterLink>
       <RouterLink to="/conditional_rendering">Conditional Rendering</RouterLink>
       <RouterLink to="/list_rendering">List Rendering</RouterLink>
+      <RouterLink to="/lifecycle">Lifecycle & Template Refs</RouterLink>
     </nav>
     <main>
       <RouterView />
@@ -30,7 +31,7 @@ main {
 }
 
 nav {
-  min-width: 300px;
+  min-width: 340px;
   padding: 40px;
   background-color: rgb(255, 255, 255);
   display: flex;

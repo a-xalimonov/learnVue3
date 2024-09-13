@@ -5,6 +5,7 @@ import EventListeners from '../views/EventListeners/EventListeners.vue'
 import FormBinding from '../views/FormBinding/FormBinding.vue'
 import ConditionalRendering from '../views/ConditionalRendering/ConditionalRendering.vue'
 import ListRendering from '../views/ListRendering/ListRendering.vue'
+import Lifecycle from '../views/Lifecycle/Lifecycle.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -42,6 +43,11 @@ const router = createRouter({
       path: '/list_rendering',
       name: 'list_rendering',
       component: ListRendering
+    },
+    {
+      path: '/lifecycle',
+      name: 'lifecycle',
+      component: Lifecycle
     },
   ]
 })
