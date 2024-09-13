@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import type { TodoItem } from './types'
+import { ref, computed } from 'vue';
+import { type TodoItem, Filter } from './types'
 
 const newName= ref<string>('');
+const filter = ref<Filter>(Filter.All);
 const list = ref<TodoItem[]>([
 	{
 		name: 'Купить молоко',
@@ -36,6 +37,30 @@ function addItem() {
 		newName.value = '';
 	}
 }
+function todoClasses(item: TodoItem) {
+	return {
+		'inactive': !item.active
+	};
+}
+function btnClasses(btnFilter: Filter) {
+	return {
+		'active-filter': btnFilter === filter.value
+	};
+}
+function setFilter(newFilter: Filter) {
+	filter.value = newFilter;
+}
+
+const filteredList = computed(() => {
+	switch (filter.value) {
+		case Filter.All:
+			return list.value;
+		case Filter.Active:
+			return list.value.filter(item => item.active);
+		case Filter.Inactive:
+			return list.value.filter(item => !item.active);
+	}
+});
 
 </script>
 
@@ -47,14 +72,34 @@ function addItem() {
 				<input v-model="newName" type="text">
 				<button>Добавить</button>
 			</form>
-			
+			<div class="todo-filter">
+				<button
+					@click="setFilter(Filter.All)"
+					:class="btnClasses(Filter.All)"
+				>
+					Все
+				</button>
+				<button
+					@click="setFilter(Filter.Active)"
+					:class="btnClasses(Filter.Active)"
+				>
+					Несделанные
+				</button>
+				<button
+					@click="setFilter(Filter.Inactive)"
+					:class="btnClasses(Filter.Inactive)"
+				>
+					Сделанные
+				</button>
+			</div>
 			<div
-				v-for="item in list"
+				v-for="item in filteredList"
+				:key="item.name"
 				class="todo-item"
 				@click="toggleItem(item)"
 			>
 				<div
-					:class="{ inactive: !item.active }"
+					:class="todoClasses(item)"
 				>
 					{{ item.name }}
 				</div>
@@ -65,9 +110,6 @@ function addItem() {
 </template>
 
 <style scoped>
-.content {
-}
-
 .todo-list {
 	margin: 80px auto;
 
@@ -75,6 +117,18 @@ function addItem() {
 	flex-direction: column;
 	align-items: center;
 	width: 265px;
+}
+
+.todo-filter {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-top: 12px;
+}
+
+.active-filter {
+	color: white;
+	background-color: rgb(172, 182, 153);
 }
 
 .todo-item {
