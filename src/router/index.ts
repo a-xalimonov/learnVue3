@@ -1,9 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import DeclarativeRendering from '../views/DeclarativeRendering.vue'
-import AttributeBinding from '../views/AttributeBinding.vue'
-import EventListeners from '../views/EventListeners.vue'
-import FormBinding from '../views/FormBinding.vue'
-import ConditionalRendering from '../views/ConditionalRendering.vue'
+import DeclarativeRendering from '../views/DeclarativeRendering/DeclarativeRendering.vue'
+import AttributeBinding from '../views/AttributeBinding/AttributeBinding.vue'
+import EventListeners from '../views/EventListeners/EventListeners.vue'
+import FormBinding from '../views/FormBinding/FormBinding.vue'
+import ConditionalRendering from '../views/ConditionalRendering/ConditionalRendering.vue'
+import ListRendering from '../views/ListRendering/ListRendering.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -37,7 +38,11 @@ const router = createRouter({
       name: 'conditional_rendering',
       component: ConditionalRendering
     },
-    
+    {
+      path: '/list_rendering',
+      name: 'list_rendering',
+      component: ListRendering
+    },
   ]
 })
 

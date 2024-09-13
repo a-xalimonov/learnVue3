@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Clock from '../components/Clock.vue';
+import Clock from '../../components/Clock.vue';
 import { ref } from 'vue';
 
 const headerText = ref('Текущее время')
