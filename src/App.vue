@@ -12,6 +12,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <RouterLink to="/conditional_rendering">Conditional Rendering</RouterLink>
       <RouterLink to="/list_rendering">List Rendering</RouterLink>
       <RouterLink to="/lifecycle">Lifecycle & Template Refs</RouterLink>
+      <RouterLink to="/watchers">Watchers</RouterLink>
     </nav>
     <main>
       <RouterView />
@@ -26,7 +27,7 @@ import { RouterLink, RouterView } from 'vue-router'
 }
 
 main {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
 }
 
