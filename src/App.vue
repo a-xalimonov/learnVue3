@@ -13,6 +13,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <RouterLink to="/list_rendering">List Rendering</RouterLink>
       <RouterLink to="/lifecycle">Lifecycle & Template Refs</RouterLink>
       <RouterLink to="/watchers">Watchers</RouterLink>
+      <RouterLink to="/components">Components</RouterLink>
     </nav>
     <main>
       <RouterView />

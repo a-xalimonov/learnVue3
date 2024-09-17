@@ -7,6 +7,7 @@ import ConditionalRendering from '../views/ConditionalRendering/ConditionalRende
 import ListRendering from '../views/ListRendering/ListRendering.vue'
 import Lifecycle from '../views/Lifecycle/Lifecycle.vue'
 import Watchers from '../views/Watchers/Watchers.vue'
+import Components from '../views/Components/Components.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -54,6 +55,11 @@ const router = createRouter({
       path: '/watchers',
       name: 'watchers',
       component: Watchers
+    },
+    {
+      path: '/components',
+      name: 'components',
+      component: Components
     },
   ]
 })
