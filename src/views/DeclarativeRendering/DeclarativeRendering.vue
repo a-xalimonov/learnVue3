@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Clock from '../components/Clock.vue';
+import Clock from '../../components/Clock/Clock.vue';
 import { ref } from 'vue';
 
 const headerText = ref('Текущее время')
@@ -15,6 +15,6 @@ const headerText = ref('Текущее время')
 <style scoped>
 .content {
   text-align: center;
-  margin: 80px auto
+  margin-top: 80px;
 }
 </style>

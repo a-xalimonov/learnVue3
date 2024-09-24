@@ -6,6 +6,14 @@ import { RouterLink, RouterView } from 'vue-router'
   <div class="wrapper">
     <nav>
       <RouterLink to="/declarative_rendering">Declarative Rendering</RouterLink>
+      <RouterLink to="/attribute_binding">Attribute Binding</RouterLink>
+      <RouterLink to="/event_listeners">Event Listeners</RouterLink>
+      <RouterLink to="/form_binding">Form Binding</RouterLink>
+      <RouterLink to="/conditional_rendering">Conditional Rendering</RouterLink>
+      <RouterLink to="/list_rendering">List Rendering</RouterLink>
+      <RouterLink to="/lifecycle">Lifecycle & Template Refs</RouterLink>
+      <RouterLink to="/watchers">Watchers</RouterLink>
+      <RouterLink to="/components">Components</RouterLink>
     </nav>
     <main>
       <RouterView />
@@ -20,12 +28,12 @@ import { RouterLink, RouterView } from 'vue-router'
 }
 
 main {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
 }
 
 nav {
-  min-width: 300px;
+  min-width: 340px;
   padding: 40px;
   background-color: rgb(255, 255, 255);
   display: flex;
